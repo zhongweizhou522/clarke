@@ -117,6 +117,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   LoginviewAction: {
+
     width: 295,
     height: 50,
     top: 261,
@@ -160,5 +161,14 @@ export const styles = StyleSheet.create({
     left: 80,
     borderRadius: 3,
     marginTop: 10,
+  },
+  SignUpButtonAction: {
+    position: 'absolute',
+    width: 295,
+    height: 50,
+    top: 620,
+    left: 80,
+    borderRadius: 5,
+    backgroundColor: '#F7D068',
   }
 });

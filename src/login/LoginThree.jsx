@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Select, } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Select, option } from 'react-native';
 import { styles } from './styles';
 import LinearGradient from 'react-native-linear-gradient';
-import { ResetButton, ForgetButton, LoginButton, SignUp } from '../components/ContinusWithButton';
+import { SignUpButton } from '../components/ContinusWithButton';
 import { useState } from 'react';
 import RNPickerSelect from 'react-native-picker-select';
 export default function LoginThree() {
@@ -10,10 +10,6 @@ export default function LoginThree() {
     const [Firstname, setFirstname] = useState('');
     const [Lastname, setLastname] = useState('');
     const [Email, setEmail] = useState('');
-    const items = [
-        { value: 'Income', label: 'Income' },
-        { value: 'Expense', label: 'Expense' },
-    ]
     return (
         <LinearGradient
             colors={['#22252A', '#3C3C3C', '#1B1B1B']}
@@ -36,32 +32,29 @@ export default function LoginThree() {
                 <TextInput
                     placeholder="Firstname"
                     style={styles.textInput}
-                    onChange={e => setUsername(e.target.text)}
+                    onChange={e => setFirstname(e.target.text)}
                 />
             </View>
             <View style={styles.SignUpaction}>
                 <TextInput
                     placeholder="Lastname"
                     style={styles.textInput}
-                    onChange={e => setUsername(e.target.text)}
+                    onChange={e => setLastname(e.target.text)}
                 />
             </View>
             <View style={styles.SignUpaction}>
                 <TextInput
                     placeholder="Email"
                     style={styles.textInput}
-                    onChange={e => setUsername(e.target.text)}
+                    onChange={e => setEmail(e.target.text)}
                 />
             </View>
             <View style={styles.SignUpaction}>
-                {/* <TextInput
+                <TextInput
                     placeholder="Favorite Team"
                     style={styles.textInput}
                     onChange={e => setUsername(e.target.text)}
-                /> */}
-
-                {/* <Select options={items} /> */}
-
+                />
             </View>
             <View style={styles.SignUpaction}>
                 <TextInput
@@ -91,9 +84,9 @@ export default function LoginThree() {
                     onChange={e => setUsername(e.target.text)}
                 />
             </View>
-
-
-
+            <View style={styles.SignUpButtonAction}>
+                <SignUpButton onpress={() => console.log("SignUp")} />
+            </View>
         </LinearGradient>
     )
 

@@ -35,25 +35,25 @@ export default function LoginTwo() {
                     />
                 </View>
                 <View style={styles.ForgetResetAction}>
-                    <ForgetButton onPress={console.log("dfdf")}>
+                    <ForgetButton onPress={() => console.log("dfdf")}>
                         <Text style={{ color: '#F3F6F6', fontWeight: '400', fontFamily: 'Roboto', fontSize: 14, }}>
                             ForgotPasssword?
                         </Text>
                     </ForgetButton>
-                    <ResetButton onPress={console.log("dfdfdf")}>
+                    <ResetButton onPress={() => console.log("dfdfdf")}>
                         <Text style={{ color: '#F3F6F6', fontWeight: '400', fontFamily: 'Roboto', fontSize: 14, textDecorationLine: "underline" }}>
                             reset
                         </Text>
                     </ResetButton>
                 </View>
                 <View style={styles.LoginviewAction} >
-                    <LoginButton on press={console.log("ddd")} />
+                    <LoginButton onpress={() => console.log("login")} />
                 </View>
                 <View style={styles.LoginAccountAction}>
                     <Text style={{ color: '#F3F6F6', fontWeight: '400', fontFamily: 'Roboto', fontSize: 14, }}>
                         Don’t have an account?
                     </Text>
-                    <SignUp onPress={console.log("sign up")} />
+                    <SignUp onPress={() => console.log("sign up")} />
                 </View>
             </View>
         </LinearGradient>

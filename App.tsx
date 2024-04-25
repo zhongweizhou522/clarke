@@ -4,11 +4,12 @@ import LoginView from './src/login/loginpage';
 import LoginFirst from './src/login/LoginFirst';
 import LoginTwo from './src/login/LoginTwo';
 import LoginThree from './src/login/LoginThree';
+
 function App() {
   return (
     // <LoginView/>
-    // <LoginFirst/>
-    // <LoginTwo/>
+    // <LoginFirst />
+    // <LoginTwo />
     <LoginThree />
   )
 }
