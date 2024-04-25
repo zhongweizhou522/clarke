@@ -1,15 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Select, option } from 'react-native';
+import { CheckBox } from 'react-native-checkbox';
 import { styles } from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import { SignUpButton } from '../components/ContinusWithButton';
 import { useState } from 'react';
 import RNPickerSelect from 'react-native-picker-select';
+
 export default function LoginThree() {
     const [Username, setUsername] = useState('');
     const [Firstname, setFirstname] = useState('');
     const [Lastname, setLastname] = useState('');
     const [Email, setEmail] = useState('');
+    const [isSelected, setSelection] = useState(false);
     return (
         <LinearGradient
             colors={['#22252A', '#3C3C3C', '#1B1B1B']}
@@ -86,6 +89,13 @@ export default function LoginThree() {
             </View>
             <View style={styles.SignUpButtonAction}>
                 <SignUpButton onpress={() => console.log("SignUp")} />
+            </View>
+            <View>
+                <CheckBox
+                    value={isSelected}
+                    onValueChange={setSelection}
+                />
+                <Text>Do you like React Native?</Text>
             </View>
         </LinearGradient>
     )
